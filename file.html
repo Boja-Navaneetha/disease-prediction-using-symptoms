@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Disease Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gun.css') }}">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='diss.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; /* Prevent background repetition */
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color as needed */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result-text {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-text">
+            <h1>Disease Prediction Result</h1>
+        </div>
+        <div class="result-text">
+            <p>Predicted Disease: {{ predicted_disease }}</p>
+        </div>
+    </div>
+</body>
+</html>
