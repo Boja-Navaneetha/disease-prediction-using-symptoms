@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gun.css') }}">
+</head>
+<body class="index2">
+    <div class="background-image">
+        <div class="container">
+            <h2>DISEASE PREDICTION</h2>
+            <form action="/predict" method="POST">
+                <label for="symptom1">Select Symptom 1:</label>
+                <select name="symptom1" required>
+                    <option value="" disabled selected>Select Here</option>
+                    {% for symptom in symptoms %}
+                        <option value="{{ symptom }}">{{ symptom }}</option>
+                                      {% endfor %}
+                </select><br><br>
+
+                <label for="symptom2">Select Symptom 2:</label>
+                <select name="symptom2" required>
+                    <option value="" disabled selected>Select Here</option>
+                    {% for symptom in symptoms %}
+                        <option value="{{ symptom }}">{{ symptom }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="symptom3">Select Symptom 3:</label>
+                <select name="symptom3" required>
+                    <option value="" disabled selected>Select Here</option>
+                    {% for symptom in symptoms %}
+                        <option value="{{ symptom }}">{{ symptom }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="symptom4">Select Symptom 4:</label>
+                <select name="symptom4" required>
+                    <option value="" disabled selected>Select Here</option>
+                    {% for symptom in symptoms %}
+                        <option value="{{ symptom }}">{{ symptom }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
